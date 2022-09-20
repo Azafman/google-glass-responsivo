@@ -1,0 +1,108 @@
+.data {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    font-size: 0.75em;
+    color: var(--cor2);
+}
+#figure-uso-glass {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border: 3px solid white;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.445);
+    margin: 20px;
+    filter: none;
+} 
+.img-uso-glass {
+    width: 100%; 
+    height: 100%; 
+    transition: 0.4s ease-in;
+}
+#figure-uso-glass > figcaption {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 10px;
+    color: white;
+    font-weight: bolder;
+}
+#figure-uso-glass:hover > figcaption {
+    visibility: visible !important;
+}
+.img-uso-glass:hover { 
+    background-color: rgba(0,0,0,.4);
+    filter: brightness(0.6);
+}
+.especificacoes-tecnicas {
+    display: flex;
+    flex-direction: column;
+}
+.tbl {
+    background: var(--cor2);
+    
+    flex: 1;
+    margin: 20px;
+}
+.tbl-cabecalho {
+    background-color: white;
+    color: var(--cor2);
+    font-size: 1.4em;
+    margin-bottom: 0.25em;
+}
+.data {
+    margin: -22px 0 0 0;
+    font-size: 0.6em;
+}
+.tbl-coluna {
+    padding: 5px;
+    text-align: right;
+    font-size: 1.2em;
+    color: white;
+}
+.tabela-linha > .tbl-coluna:nth-child(2) {
+    background-color: white;
+    text-align: left;
+    color: var(--cor2);
+}
+.google-glass-faz {
+    position: relative;
+}
+.video-centro {
+    display: flex;
+    justify-content: center;
+}
+.video-ytb {
+    width: 90%;
+    margin-bottom: 20px;
+}
+.noticias {
+    background-color: var(--cor3);
+    box-shadow: 3px 3px 3px 3px var(--cor5);
+    padding: 10px;
+    box-sizing: border-box;
+}
+.noticiasGlass {
+    color: var(--cor2) !important;
+    font-size: 2em;
+}
+.midia-recente {
+    color: white;
+    background-image: linear-gradient(to right, var(--cor2), var(--cor4), var(--cor3));
+    padding: 5px;
+}
+@media (min-width: 850px) {
+
+    .conteudo-principal {
+        flex-basis: 60%;
+        border-right: 1px solid black;
+        padding-right: 10px;
+        padding-bottom: 40px;
+    }
+    .noticias {
+        flex-basis: 35%;
+        margin-left: 10px;
+        margin-top: 10px;
+        height: 95%;
+    } 
+}

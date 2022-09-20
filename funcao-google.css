@@ -1,0 +1,26 @@
+.funcao-google-glass {
+    max-width: 85%;
+    margin: 0;
+    padding: 0;
+}
+.google-glass-faz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navegacao-imagem {
+    width: 85%;
+    padding: 0;
+    margin-bottom: 10px;
+    min-height: 250px;
+}
+@media (min-width: 800px) {
+    .google-glass-faz {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .navegacao-imagem  .cabecalho  {
+        flex-direction: column;
+    }
+   
+}

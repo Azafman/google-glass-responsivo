@@ -1,0 +1,38 @@
+h2, h4, p, h3 {
+    margin: 0;
+    padding: 0;
+}
+.cabecalho {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.funcionalidade {
+    margin-bottom: 500px;
+}
+.funcionalidade:nth-child(1) {
+    margin-top: 500px;
+}
+.titulo-funcionalidade {
+    background-color: #888888;
+    color: white;           
+    padding: 2px;
+    box-sizing: border-box;
+}
+.subtitulo-funcionalidade {
+    color: #888888;
+}
+.subtitulo-funcionalidade:nth-child(1) {
+    text-align: center;
+}
+.texto {
+    text-indent: 30px;
+    padding: 5px;
+    text-align: justify;
+}
+.img-mao {
+    margin: 40px 0;
+    width: 150px;
+    transform: rotate(90deg);
+}
+

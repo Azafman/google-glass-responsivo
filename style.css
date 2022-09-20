@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2? family= Noto+Sans:wght@300 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Noto+Sans:wght@300&family=Titillium+Web:wght@300&display=swap');
+:root {
+    --cor1: #AAAAAA;
+    --cor2: #606060;
+    --cor3: #DDDDDD;
+    --cor4: #888888;
+    --cor5: rgba(0,0,0,.4);
+}
+body {
+    margin: 0;
+    padding: 0 10px;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+.cabecalho {
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+.img-scroll {
+    display: none;
+}
+.tema-do-site {
+    color: var(--cor2);
+    font-size: 0.9em;
+    margin-top: -10px;
+}
+.titulo-header {
+    margin: 0 !important;
+}
+.links-site {
+    position: relative; 
+    margin: 0;
+    /* display: none; */
+}
+.link {
+    display: block;
+    padding: 5px;
+    background-color: #AAAAAA;
+    margin: 3px 0;
+    color: black;
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link:hover {
+    background-color: var(--cor2);
+}
+
+.nav {
+    right: 20px;
+    border-radius: 10px;
+    min-height: 155px;
+    max-width: 170px;
+    background-color: var(--cor3);
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) !important; 
+}
+.nav1 {
+    display: inline-block !important;
+    visibility: visible !important; 
+    opacity: 1;
+}
+.container-menu {
+    width: 10%;
+    padding: 20px;
+    top: -50px;
+    right: 0;
+    position: absolute;
+}
+.block {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.item-menu {
+    position: absolute;
+    top: 0;
+    height: 5px;
+    width: 50px;
+    background: var(--cor2);
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.item-menu:nth-child(2) {
+    margin-top: 15px;
+}
+.item-menu:nth-child(3) {
+    margin-top: 30px;
+} 
+.item-menu1:nth-child(1) {
+    transform: rotate(225deg); 
+    margin-top: 15px
+}
+.item-menu1:nth-child(2) {
+    transform: translateX(-45px); 
+    visibility: hidden;
+    background-color: var(--cor3);
+    width: 20px;
+}
+.item-menu1:nth-child(3) {
+    margin-top: 15px;
+    transform: rotate(135deg);  
+} 
+
+.bubblegum {
+    font-family: 'Bubblegum Sans', cursive !important;
+    color: var(--cor2);
+    margin-bottom: 0;
+}
+.titilium {
+    font-family: 'Titillium Web', sans-serif !important;
+    color: var(--cor4);
+    margin-top: 0;
+}
+
+.corpo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.corpo, .cabecalho {
+    padding: 15px;
+    box-sizing: border-box;
+}
+.explicacoes {
+    color: var(--cor2); 
+    background-color: var(--cor3);
+    box-sizing: border-box;
+    padding: 3px;
+    font-size: 1.25em;
+    margin: 0;
+}
+.paragrafos {
+    text-align: justify;
+    text-indent: 30px;
+}
+.conteudo-principal, .noticias {
+    flex: 1 1 auto;
+}
+.rodape {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid black;
+}
+.rodape > p {
+    margin: 7.5px
+}
+.link2 {
+    background-color: transparent;
+    border-radius: 5px;
+    background-color: var(--cor1);
+    padding: 5px;
+    display: inline-block !important;
+    width: auto !important;
+}
+@media (min-width: 850px) {
+    .cabecalho {
+        border-bottom: 1px solid black;
+    }
+    /* .nav {
+        display: inline-block !important;
+        visibility: visible !important; 
+        opacity: 1;
+        min-width: 70% !important;
+    } */
+    .container-menu {
+        display: none;
+    }
+    .nav {
+        display: block !important;
+        visibility: visible !important; 
+        opacity: 1;
+        min-width: 80%;
+    }
+    .links-site {
+        display: flex;
+    }
+    .link {
+        flex: 1 !important;
+    }       
+    .corpo {
+        padding-top: 0 !important;
+        /* padding-bottom: 0 !important; */
+        flex-direction: row;    
+        padding-bottom: 0;
+    }
+    .informacoes-pag {
+        margin-top: 20px;
+    }
+    .img-scroll {
+        display: block;
+    }
+}
