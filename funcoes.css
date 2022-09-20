@@ -35,4 +35,7 @@ h2, h4, p, h3 {
     width: 150px;
     transform: rotate(90deg);
 }
-
+.vira-de-novo {
+    transform: rotate(-90deg);
+    border: 1px solid black;
+}

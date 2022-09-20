@@ -18,9 +18,8 @@
     .google-glass-faz {
         flex-direction: row;
         align-items: flex-start;
+    }   
+    img.img-mao {
+        transform: rotate(30deg);
     }
-    .navegacao-imagem  .cabecalho  {
-        flex-direction: column;
-    }
-   
 }
