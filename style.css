@@ -28,13 +28,28 @@ body {
 .titulo-header {
     margin: 0 !important;
 }
+.link:hover {
+    background-color: var(--cor2);
+}
+.nav {
+    right: 20px;
+    background-color: var(--cor3);
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: 1s  !important; 
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
 .links-site {
     position: relative; 
     margin: 0;
     /* display: none; */
 }
 .link {
-    display: block;
     padding: 5px;
     background-color: #AAAAAA;
     margin: 3px 0;
@@ -42,29 +57,10 @@ body {
     text-decoration: none;
     transition: 0.4s ease-in-out;
     color: white;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.link:hover {
-    background-color: var(--cor2);
-}
-
-.nav {
-    right: 20px;
-    border-radius: 10px;
-    min-height: 155px;
-    max-width: 170px;
-    background-color: var(--cor3);
-    display: none;
-    visibility: hidden;
-    position: absolute;
-    opacity: 0;
-    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) !important; 
+    text-align: center;
 }
 .nav1 {
-    display: inline-block !important;
+    display: block !important;
     visibility: visible !important; 
     opacity: 1;
 }
@@ -75,12 +71,6 @@ body {
     right: 0;
     position: absolute;
 }
-.block {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-}
-
 .item-menu {
     position: absolute;
     top: 0;
@@ -90,7 +80,6 @@ body {
     border-radius: 5px;
     transition: 0.5s ease-in-out;
 }
-
 .item-menu:nth-child(2) {
     margin-top: 15px;
 }
@@ -111,7 +100,6 @@ body {
     margin-top: 15px;
     transform: rotate(135deg);  
 } 
-
 .bubblegum {
     font-family: 'Bubblegum Sans', cursive !important;
     color: var(--cor2);
@@ -122,7 +110,6 @@ body {
     color: var(--cor4);
     margin-top: 0;
 }
-
 .corpo {
     display: flex;
     flex-wrap: wrap;
@@ -167,26 +154,28 @@ body {
     .cabecalho {
         border-bottom: 1px solid black;
     }
-    /* .nav {
-        display: inline-block !important;
-        visibility: visible !important; 
-        opacity: 1;
-        min-width: 70% !important;
-    } */
     .container-menu {
         display: none;
     }
     .nav {
-        display: block !important;
+        display: inline-block !important;
         visibility: visible !important; 
         opacity: 1;
         min-width: 80%;
+        padding: 0;
+        top: -60px;
+        right: 0px;
     }
-    .links-site {
-        display: flex;
+     .flex-container {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     .link {
-        flex: 1 !important;
+        flex: 1 1 0; 
+        margin: 0 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }       
     .corpo {
         padding-top: 0 !important;
