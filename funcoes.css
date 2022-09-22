@@ -2,7 +2,7 @@ h2, h4, p, h3 {
     margin: 0;
     padding: 0;
 }
-.cabecalho {
+.cabecalho1 {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -32,10 +32,22 @@ h2, h4, p, h3 {
 }
 .img-mao {
     margin: 40px 0;
-    width: 150px;
+    width: 40%;
     transform: rotate(90deg);
 }
 .vira-de-novo {
     transform: rotate(-90deg);
     border: 1px solid black;
+}
+article {
+    margin-top: 10px;
+}
+@media (min-width: 800px) {
+    .cabecalho1 {
+        flex-direction: column;
+    }
+    .img-mao {
+        width: 280px;
+        transform: rotate(0deg);
+    }
 }

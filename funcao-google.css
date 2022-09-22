@@ -1,5 +1,8 @@
+
 .funcao-google-glass {
-    max-width: 85%;
+    overflow-y: scroll;
+    /* tentar mudar o scroll amanhã */
+    width: 70%;
     margin: 0;
     padding: 0;
 }
@@ -7,19 +10,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .navegacao-imagem {
     width: 85%;
     padding: 0;
     margin-bottom: 10px;
-    min-height: 250px;
+    max-height: 275px;
+    overflow-y: scroll;
+    padding-top: 10px;
 }
+@media (min-width: 600px){.navegacao-imagem{padding-top: 20px;}}
+@media (min-width: 720px){.navegacao-imagem{padding-top: 30px;}}
 @media (min-width: 800px) {
+    .navegacao-imagem {
+        overflow-y: scroll;
+        padding-top: 0px;
+    }
+    .funcao-google-glass {
+        width: 80%;
+    }
     .google-glass-faz {
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
     }   
     .img-mao {
-        transform: rotate(30deg);
+        transform: rotate(0deg);
     }
 }

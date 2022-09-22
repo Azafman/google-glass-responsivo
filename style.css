@@ -31,6 +31,13 @@ body {
 .link:hover {
     background-color: var(--cor2);
 }
+.data {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    font-size: 0.75em;
+    color: var(--cor2);
+}
 .nav {
     right: 20px;
     background-color: var(--cor3);
