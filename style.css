@@ -157,6 +157,12 @@ body {
     display: inline-block !important;
     width: auto !important;
 }
+.google-glass-faz {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @media (min-width: 850px) {
     .cabecalho {
         border-bottom: 1px solid black;
