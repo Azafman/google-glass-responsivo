@@ -4,7 +4,7 @@ function mudaClasse(objeto) {
      const navegacao = document.getElementsByClassName('nav')
      setTimeout(() => {
           navegacao[0].classList.toggle('nav1');
-     }, 400)
+     }, 200)
      for(let i in items) {
           items[i].classList.toggle('item-menu1');
      }

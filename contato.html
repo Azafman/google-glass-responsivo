@@ -6,6 +6,7 @@
     <meta name="viewport" content="width= , initial-scale=1.0">
     <title>Tudo Sobre o Google Glass</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contato.css">
     <script src="cabecalho.js"></script>
 </head>
 <body>
@@ -46,11 +47,126 @@
                 <span class="data">Atualizado em Mar/2022</span>            
             </header>
             <section class="conteudo">
-                <section>
-                
-                </section>
                 <section class="google-glass-faz">
-                    <!-- iframe -->
+                    <form action="">
+                            <h1>Dados do usuario</h1>
+                            <p>Informações do usuário necessários para compra serão seguidos por<strong><abbr title="required">*</abbr></strong>.</p>
+                            <section class="dados-usuaris">
+                                <fieldset class="field">
+                                    <legend>Identificação</legend>
+                                    <label for="nome-usuario">
+                                         <p>
+                                            <span>Nome:<abbr title="required">*</abbr></span>
+                                            <input type="text" name="" id="nome-usuario">
+                                        </p>
+                                    </label>
+                                    <label for="senha-usuario">
+                                        <p>
+                                            <span>Senha:<abbr title="required">*</abbr></span>
+                                            <input type="password" name="" id="senha-usuario">
+                                        </p>
+                                    </label>
+                                    <label for="email-usuario">
+                                        <p>
+                                            <span>Email:<abbr title="required">*</abbr></span>
+                                            <input type="email" name="" id="email-usuario">
+                                        </p>
+                                    </label>
+                                    <fieldset>
+                                        <legend>Sexo usuario</legend>
+                                        <ul class="sexo-usuario">
+                                            <li>
+                                                <label for="masculino">Masculino</span>
+                                                <input type="radio" name="usur" id="masculino">
+                                            </li>
+                                            <li>
+                                                <label for="feminino">Feminino</label> 
+                                                <input type="radio" name="usur" id="feminino">
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                    <p>
+                                        <label for="data-nasciment">Data Nascimento:</label>
+                                        <input type="date" name="" id="data-nasciment">
+                                    </p>
+                                </fieldset>
+                            </section>
+                            <section class="dados-usuaris">
+                                <fieldset class="field">
+                                    <legend>Endereço</legend>
+                                    <p>
+                                        <label for="logradouro">Logradouro</label>
+                                        <input type="text" name="" id="Logradouro">
+                                    </p>
+                                    <p>
+                                        <label for="numero-usuario">Número: </label>
+                                        <input type="tel" name="" id="numero-usuario">
+                                    </p>
+                                    <p>
+                                        <label for="estado-usu">Estado</label>
+                                        <select name="" id="estado-usu">
+                                                <option value=""></option>
+                                                <option value="SP">São Paulo</option>
+                                                <option value="MG">Minas Gerais</option>
+                                                <option value="RJ">Rio de Janeiro</option>
+                                                <option value="AM">Amazonas</option>
+                                                <option value="PR">Pará</option>
+                                                <option value="RS">Rio Grande do Sul</option>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label for="cidade">Cidade:</label>
+                                        <input type="text" name="" id="cidade" list="cidade-U" maxlength="40">
+                                        <datalist id="cidade-U">
+                                            <option value="Guarulhos"></option>
+                                            <option value="Porto Alegre"></option>
+                                            <option value="Rio de Janeiro"></option>
+                                            <option value="Belo Horizonte"></option>
+                                            <option value="Uberlândia"></option>
+                                            <option value="Manaús"></option>
+                                            <option value="São Paulo"></option>
+                                        </datalist>
+                                    </p>
+                                    <!-- A diferença entre um <select> e um <datalist> é que no select vc determina as opções que o usuário é "obrigado" a escolher entre elas. Já o datalist vc oferece algumas sugestões para o usuário, mas ele é livre para digitar o que quiser, ou seja, é uma lista pre-definida, não uma lista pre-determinada como a select . -->
+                                </fieldset>
+                            </section>
+                            <section class="dados-usuaris">
+                                <fieldset class="field">
+                                    <legend>Mensagem</legend>
+                                    <p>
+                                        <label for="necessidad">Grau de Urgência</label>
+                                        <input type="range" min="1 " max="10" name="" id="necessidad">
+                                    </p>
+                                    <p>
+                                        <label for="mensagem-usu">Mensagem:</label>
+                                        <textarea name="" id="mensangem-usu" cols="30" rows="10"></textarea>
+                                    </p>
+                                </fieldset>
+                            </section>
+                            <section class="dados-usuaris">
+                                <fieldset class="field">
+                                    <legend>Pedido Google Glass</legend>
+
+                                    <p>
+                                        <input type="checkbox" name="" id="resposta-pedido">
+                                        <label for="resposta-pedido">Gostaria de adquirir um Google Glass quando disponível</label>
+                                    </p>
+                                    <p>
+                                        <label for="cor-pedido">Cor: </label>
+                                        <input type="color" name="" id="cor-pedido">
+                                    </p>
+                                    <p>
+                                        <label for="qtd-Glass">Quantidade: </label>
+                                        <input type="number" name="" id="qtd-Glass" min="0" max="50">   
+                                    </p>
+                                    <p>
+                                        <label for="tot-Glass">Preço Total: </label>
+                                        <input type="number" name="" disabled id="qtd-Glass" min="0" max="50">
+                                    </p>
+                                </fieldset>
+                            </section>
+                            <!-- button enviar  com efeito css, ig-->
+                    </form>
                 </section>
             </section>
         </section>

@@ -1,0 +1,24 @@
+.field {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+.sexo-usuario {
+     list-style-type: none;
+     display: flex;
+     flex-direction: row-reverse;
+     
+}
+.sexo-usuario > li {
+     margin-left: 5px;
+}
+abbr {
+     opacity: 0;
+}
+#estado-usu {
+     overflow-y: scroll !important;
+}
+#estado-usu:: {
+
+}
