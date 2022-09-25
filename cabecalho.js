@@ -12,6 +12,7 @@ function mudaClasse(objeto) {
 (function() {
      const menu = document.getElementsByClassName('container-menu')[0];
      const iframe = document.getElementsByTagName('iframe')[0]
+     menu.classList.replace()
      
      let largura = window.screen.width;
      if(largura >= 850) {

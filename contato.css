@@ -1,3 +1,6 @@
+.dados-usuaris {
+     margin: 10px 0;
+}
 .field {
      display: flex;
      flex-direction: column;
