@@ -47,8 +47,6 @@
 .img6::before {
     content: 'Informações importantes';
 }
-
-
 .img1 {
     background-image: url('_imagens/galeria-01.jpg') !important;
 }
@@ -76,6 +74,9 @@
     display: none !important;
     /* visibility: hidden   ; */
     background-image: url('_imagens/galeria-06.jpg') !important;
+}
+.muda1 {
+    display: inline-block !important;
 }
 @media (min-width: 450px) {
     .slide-img {
