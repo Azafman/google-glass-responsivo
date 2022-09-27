@@ -11,9 +11,10 @@ function mostrarLegenda(span) {
 }
  function sizeOfThings() {
      let larguraDispositivo = window.innerWidth;
+     const imagens = document.querySelectorAll('span.slide-img');
      
      if(larguraDispositivo < 450 ) {
-          window.setTimeout(changeSpan, 5000);
+          changeSpan(imagens);
      } else if (larguraDispositivo < 620 ) {
           
      } else if (larguraDispositivo < 700 ) {
@@ -25,23 +26,41 @@ function mostrarLegenda(span) {
      } else {
 
      }
-     sizeOfThings();
+     // sizeOfThings();
 }
+function changeSpan(imagens) {
+     // const imagens1 = document.getElementsByClassName('slide-img')[0]
 
-function changeSpa() {
-     const imagens = document.querySelectorAll('span.slide-img');
+     // await window.setTimeout(slideImg, 3000);
+     // function sayHello() {console.log('HELLO!')}
 
-     imagens.forEach((el,index, array) => {
-          el.classList.add(imagens[index+1].classList[1]); 
-
-
-          if(index === imagens.length-1) {
-               el.classList.replace(imagens[index+1].classList[1])
-          }
-          if(index === 0) {
-               el.classList.add('muda1');
-          }
-               // el.classList.replace(el.classList[1],imagens[index+1].classList[1]);
-     });
-     sizeOfThings();
+     slideImg()
+     function slideImg() {
+          // imagens.forEach(async (el, index, array) => {
+          //      if(index === 0) {
+          //           // el.classList.add('muda1');
+          //           for(let cont = 1; cont <= imagens; cont++) {
+          //                await window.setTimeout(sayHello, 3000);
+          //                if(cont < imagens.length) {
+          //                     // el.classList.replace(el.classList[1],imagens[cont ].classList[1]); 
+          //                     el.classList.add(imagens[cont].classList[1]); 
+          //                } else {
+          //                     el.classList.replace(el.classList[1],imagens[0].classList[1]); 
+          //                }
+          //           }
+          //      }
+          // });
+          imagens.forEach((elPai, indexPai, arrayPai) => {
+               if(indexPai == 0 ) {
+                    imagens.forEach(async (el, index, array) => {
+                         const test = () => {
+                              imagens[indexPai].classList.add(`img${index+1}`);
+                         }
+                         window.setTimeout(await test, 3000);
+                    })
+                    imagens[indexPai].classList.add('muda1');
+               }
+          });
+     }
+     // changeSpan(imagens);
 }
