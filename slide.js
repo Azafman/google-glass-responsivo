@@ -29,38 +29,26 @@ function mostrarLegenda(span) {
      // sizeOfThings();
 }
 function changeSpan(imagens) {
-     // const imagens1 = document.getElementsByClassName('slide-img')[0]
-
-     // await window.setTimeout(slideImg, 3000);
-     // function sayHello() {console.log('HELLO!')}
 
      slideImg()
      function slideImg() {
-          // imagens.forEach(async (el, index, array) => {
-          //      if(index === 0) {
-          //           // el.classList.add('muda1');
-          //           for(let cont = 1; cont <= imagens; cont++) {
-          //                await window.setTimeout(sayHello, 3000);
-          //                if(cont < imagens.length) {
-          //                     // el.classList.replace(el.classList[1],imagens[cont ].classList[1]); 
-          //                     el.classList.add(imagens[cont].classList[1]); 
-          //                } else {
-          //                     el.classList.replace(el.classList[1],imagens[0].classList[1]); 
-          //                }
-          //           }
-          //      }
-          // });
           imagens.forEach((elPai, indexPai, arrayPai) => {
                if(indexPai == 0 ) {
                     imagens.forEach(async (el, index, array) => {
-                         const test = () => {
+                         const test = (ms) => {
                               imagens[indexPai].classList.add(`img${index+1}`);
+                              return new Promise(async (resolve) => {
+                                   window.setTimeout(await resolve('Hello'), ms);
+                              })
                          }
-                         window.setTimeout(await test, 3000);
+                         // window.setTimeout(await test, 3000);
+                         (async function(){
+                              await test(3000).then(console.log);
+                         })();
                     })
                     imagens[indexPai].classList.add('muda1');
                }
           });
      }
-     // changeSpan(imagens);
+     // (changeSpan(imagens));
 }
