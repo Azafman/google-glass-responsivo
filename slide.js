@@ -11,10 +11,24 @@ function mostrarLegenda(span) {
 }
  function sizeOfThings() {
      let larguraDispositivo = window.innerWidth;
+     let cont = 2;
      const imagens = document.querySelectorAll('span.slide-img');
      
      if(larguraDispositivo < 450 ) {
-          changeSpan(imagens);
+          changeSpan();
+          function changeSpan() {
+               // const imagens = document.querySelectorAll('span.slide-img');
+               // window.setTimeout(slideImg, 2500);
+          
+               window.setTimeout(slideImg, 3500);;
+               function slideImg() {
+                    if(cont > 6) cont = 1;
+                    imagens[0].classList.replace(imagens[0].classList[1], `img${cont}`)
+                    imagens[0].classList.add('muda1');
+                    window.setTimeout(changeSpan, 100);
+                    cont++;
+               }
+          }
      } else if (larguraDispositivo < 620 ) {
           
      } else if (larguraDispositivo < 700 ) {
@@ -28,27 +42,28 @@ function mostrarLegenda(span) {
      }
      // sizeOfThings();
 }
-function changeSpan(imagens) {
+function changeSpan() {
+     const imagens = document.querySelectorAll('span.slide-img');
+     // window.setTimeout(slideImg, 2500);
 
-     slideImg()
+     cont = window.setTimeout(slideImg, 2500);;
      function slideImg() {
-          imagens.forEach((elPai, indexPai, arrayPai) => {
-               if(indexPai == 0 ) {
-                    imagens.forEach(async (el, index, array) => {
-                         const test = (ms) => {
-                              imagens[indexPai].classList.add(`img${index+1}`);
-                              return new Promise(async (resolve) => {
-                                   window.setTimeout(await resolve('Hello'), ms);
-                              })
-                         }
-                         // window.setTimeout(await test, 3000);
-                         (async function(){
-                              await test(3000).then(console.log);
-                         })();
-                    })
-                    imagens[indexPai].classList.add('muda1');
-               }
-          });
+          // if(cont > 6) cont = 1;
+          imagens[0].classList.add('muda1');
+          imagens[0].classList.add(`img${cont}`);
+          window.setTimeout(changeSpan, 100);
+          return cont++;
      }
-     // (changeSpan(imagens));
 }
+
+// function changeSpan(imagens, cont) {
+//      if(cont > 6) cont = 1;
+//      cont = window.setTimeout(slideImg(cont, imagens), 2500);
+// }
+
+// function slideImg(numeroClasse, imagens) {
+//      imagens[0].classList.add('muda1');
+//      imagens[0].classList.add(`img${numeroClasse}`);
+//      window.setTimeout(changeSpan(imagens), 100);
+//      return numeroClasse++;
+// }

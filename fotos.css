@@ -79,6 +79,7 @@
 }
 .muda1 {
     display: inline-block !important;
+    transition: 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;
 }
 @media (min-width: 450px) {
     .slide-img {
