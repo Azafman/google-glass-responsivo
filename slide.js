@@ -42,20 +42,7 @@ function mostrarLegenda(span) {
      }
      // sizeOfThings();
 }
-function changeSpan() {
-     const imagens = document.querySelectorAll('span.slide-img');
-     // window.setTimeout(slideImg, 2500);
-
-     cont = window.setTimeout(slideImg, 2500);;
-     function slideImg() {
-          // if(cont > 6) cont = 1;
-          imagens[0].classList.add('muda1');
-          imagens[0].classList.add(`img${cont}`);
-          window.setTimeout(changeSpan, 100);
-          return cont++;
-     }
-}
-
+     
 // function changeSpan(imagens, cont) {
 //      if(cont > 6) cont = 1;
 //      cont = window.setTimeout(slideImg(cont, imagens), 2500);
