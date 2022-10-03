@@ -1,0 +1,32 @@
+.radio-img {
+    width: 90%;
+}
+picture {
+    display: flex;
+    justify-content: center;
+}
+.google-glass-faz {
+    position: relative;
+    align-items: center;
+}
+audio {
+    position: absolute;
+    bottom: 13%;
+    right: 2.5%;
+    width: 30.5%;
+    height: 17.5px;
+}
+@media (min-width:650px) {
+    audio {
+        height: 30px;
+        bottom: 11.5%;
+    }
+}
+@media (min-width:850px) {
+    audio {
+        height: 35px;
+        bottom: 10.5%;
+        width: 234px;
+        right: ;
+    }
+}
