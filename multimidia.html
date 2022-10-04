@@ -7,6 +7,31 @@
     <title>Tudo Sobre o Google Glass</title>
     <link rel="stylesheet" href="style.css">
     <script src="cabecalho.js"></script>
+    <style>
+        .corpo {
+            flex-direction: column !important;
+        }
+        picture {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            position: relative;
+        }
+        .item {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .video-glass {
+            width: 60%;
+            height: 70%;
+        }
+    </style>
+    
 </head>
 <body>
     <header class="cabecalho">
@@ -50,14 +75,18 @@
                 <p class="titilium">Por Gustavo Guanabara</p>
                 <span class="data">Atualizado em Mar/2022</span>            
             </header>
-            <section class="conteudo">
-                <section>
-                
-                </section>
-                <section class="google-glass-faz">
-                    <!-- iframe -->
-                </section>
-            </section>
+        </section>
+        <section>
+            <picture>
+                <source media="(max-width:575px)"  srcset="_imagens/tv00.jpg"> 
+                <source media="(max-width:775px)"  srcset="_imagens/tv1.jpg"> 
+                <source media="(max-width:975px)"  srcset="_imagens/tv2.jpg"> 
+                <source media="(max-width:1350px)"  srcset="_imagens/tv3.jpg"> 
+                <img src="_imagens/tv4.jpg" alt="Vídeo" >
+            </picture>
+            <div class="item">
+                <iframe class="video-glass" src="https://www.youtube.com/embed/P42H8iOxWOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </section>
     </main>
     <footer class="rodape">
@@ -65,5 +94,25 @@
         <a rel="external" target="_blank" href="github.com/Azafman" class="link link2">GitHub</a> |
         <a rel="external" target="_blank" href="" class="link link2">Discord</a>
     </footer>
+    <script>
+        (function(){
+            if(screen.width < 575) {
+                const heightImg = document.getElementsByTagName('picture')[0].children[0];
+            } else if(screen.height < 775) {
+                const heightImg = document.getElementsByTagName('picture')[0].children[1];
+            } else if(screen.height < 975) {
+                const heightImg = document.getElementsByTagName('picture')[0].children[2];
+            } else if(screen.width < 1350){
+                const heightImg = document.getElementsByTagName('picture')[0].children[3];
+            } else {
+                const heightImg = document.getElementsByTagName('picture')[0].children[4];
+            }
+            const heightIframe = document.getElementsByClassName('video-glass')[0];
+            // const heightOfItem = document.querySelector('div.item');
+            // const heightOfPicture = bc.clientHeight;
+            // heightOfItem.style.height = heightOfPicture;
+            console.log(heightImg);
+        })();
+    </script>
 </body>
 </html>

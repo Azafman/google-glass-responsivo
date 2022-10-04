@@ -6,6 +6,26 @@
      flex-direction: column;
      align-items: center;
      justify-content: center;
+     color:rgba(0, 0, 0, .5);
+}
+.field input, textarea, select {
+     background: transparent;
+     border: 0.5px solid rgba(0, 0, 0, .5);
+}
+.field input:focus {
+     padding: 5px;
+}
+.id-usu {
+     background: url(_imagens/icone-contato.png) no-repeat bottom right;
+}
+.end-usu {
+     background: url(_imagens/icone-endereco.png) no-repeat bottom right;
+}
+.msg-usu {
+     background: url(_imagens/icone-mensagem.png) no-repeat bottom right;
+}
+.pedido-usu {
+     background: url(_imagens/icone-pagamento.png) no-repeat bottom right;
 }
 .sexo-usuario {
      list-style-type: none;

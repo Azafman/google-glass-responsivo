@@ -17,8 +17,6 @@ function mostrarLegenda(span) {
      if(larguraDispositivo < 450 ) {
           changeSpan();
           function changeSpan() {
-               // const imagens = document.querySelectorAll('span.slide-img');
-               // window.setTimeout(slideImg, 2500);
           
                window.setTimeout(slideImg, 3500);;
                function slideImg() {
@@ -40,17 +38,4 @@ function mostrarLegenda(span) {
      } else {
 
      }
-     // sizeOfThings();
 }
-     
-// function changeSpan(imagens, cont) {
-//      if(cont > 6) cont = 1;
-//      cont = window.setTimeout(slideImg(cont, imagens), 2500);
-// }
-
-// function slideImg(numeroClasse, imagens) {
-//      imagens[0].classList.add('muda1');
-//      imagens[0].classList.add(`img${numeroClasse}`);
-//      window.setTimeout(changeSpan(imagens), 100);
-//      return numeroClasse++;
-// }

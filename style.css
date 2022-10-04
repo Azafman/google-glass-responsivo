@@ -166,6 +166,7 @@ body {
     justify-content: center;
     /* align-items: center; */
 }
+
 @media (min-width: 850px) {
     .cabecalho {
         border-bottom: 1px solid black;
