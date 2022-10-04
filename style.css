@@ -131,6 +131,8 @@ body {
 .explicacoes {
     color: var(--cor2); 
     background-color: var(--cor3);
+    /* background-repeat: no-repeat;
+    background-size: cover; */
     box-sizing: border-box;
     padding: 3px;
     font-size: 1.25em;
