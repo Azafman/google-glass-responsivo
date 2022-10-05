@@ -8,31 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="multimidia.css">
     <script src="cabecalho.js"></script>
-    <style>
-        .corpo {
-            flex-direction: column !important;
-        }
-        picture {
-            display: flex;
-            justify-content: center;
-            margin: 20px;
-            position: relative;
-        }
-        .item {
-            position: absolute;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .video-glass {
-            width: 60%;
-            height: 70%;
-        }
-    </style>
-    
 </head>
 <body>
     <header class="cabecalho">
@@ -55,11 +30,6 @@
                     <a href="contato.html" class="link" rel="prev" target="_parent">FALE CONOSCO</a>
                 </div>
            </nav>
-            <!-- <a href="index.html" class="link" rel="prev" target="_self">HOME</a>
-            <a href="specs.html" class="link" rel="prev" target="_self">ESPECIFICAÇÕES</a>
-            <a href="fotos.html" class="link" rel="prev" target="_self">FOTOS</a>       
-            <a href="multimidia.html" class="link" rel="prev" target="_self">MULTIMÍDIA</a>
-            <a href="contato.html" class="link" rel="prev" target="_self">FALE CONOSCO</a> -->
 
             <!-- carrossel imagens -->
             <div class="imgs">
@@ -69,7 +39,7 @@
         <img src="_imagens/glass-logo-peq.jpg" alt="" class="img-scroll">   
         <!-- <img src="_imagens/glass-logo-peq.jpg" alt=""> -->
     </header>
-    <main class="corpo">
+    <main>
         <section class="conteudo-principal">
             <header class="informacoes-pag">
                 <h2 class="bubblegum">Sons e  Vídeos</h2>
@@ -77,17 +47,13 @@
                 <span class="data">Atualizado em Mar/2022</span>            
             </header>
         </section>
-        <section>
-            <picture>
-                <source media="(max-width:575px)"  srcset="_imagens/tv00.jpg"> 
-                <source media="(max-width:775px)"  srcset="_imagens/tv1.jpg"> 
-                <source media="(max-width:975px)"  srcset="_imagens/tv2.jpg"> 
-                <source media="(max-width:1350px)"  srcset="_imagens/tv3.jpg"> 
-                <img src="_imagens/tv4.jpg" alt="Vídeo" >
-            </picture>
-            <div class="item">
+        <section class="google-glass-faz">
                 <iframe class="video-glass" src="https://www.youtube.com/embed/P42H8iOxWOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+                <audio preload="metada" controls loop>
+                    <source src="midia/To Loom Is to Love - The Mini Vandals.mp3" type="audio/mpeg">
+                    <source src="midia/To-Loom-Is-to-Love-The-Mini-Vandals.ogg" type="audio-ogg">
+                    <p>Infelizmente seu dispositivo não suporta o áudio aqui disposto</p>
+                </audio>
         </section>
     </main>
     <footer class="rodape">
@@ -97,22 +63,7 @@
     </footer>
     <script>
         (function(){
-            if(screen.width < 575) {
-                const heightImg = document.getElementsByTagName('picture')[0].children[0];
-            } else if(screen.height < 775) {
-                const heightImg = document.getElementsByTagName('picture')[0].children[1];
-            } else if(screen.height < 975) {
-                const heightImg = document.getElementsByTagName('picture')[0].children[2];
-            } else if(screen.width < 1350){
-                const heightImg = document.getElementsByTagName('picture')[0].children[3];
-            } else {
-                const heightImg = document.getElementsByTagName('picture')[0].children[4];
-            }
-            const heightIframe = document.getElementsByClassName('video-glass')[0];
-            // const heightOfItem = document.querySelector('div.item');
-            // const heightOfPicture = bc.clientHeight;
-            // heightOfItem.style.height = heightOfPicture;
-            console.log(heightImg);
+            
         })();
     </script>
 </body>
