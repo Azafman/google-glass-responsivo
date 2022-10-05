@@ -2,7 +2,7 @@
 .funcao-google-glass {
     overflow-y: scroll;
     /* tentar mudar o scroll amanhã */
-    width: 70%;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -13,16 +13,46 @@
     justify-content: center;
 }
 .navegacao-imagem {
-    width: 85%;
+    width: 95%;
     padding: 0;
     margin-bottom: 10px;
     max-height: 275px;
     overflow-y: scroll;
     padding-top: 10px;
+    font-size: 0.8em;
 }
-@media (min-width: 600px){.navegacao-imagem{padding-top: 20px;}}
-@media (min-width: 720px){.navegacao-imagem{padding-top: 30px;}}
+.figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tela {
+    width: 70%;
+}
+@media (min-width: 600px){
+    .navegacao-imagem{
+        padding-top: 20px;
+    }
+    .funcao-google-glass {
+        width: 80%;
+    }
+}
+@media (min-width: 720px){
+    .navegacao-imagem{padding-top: 30px;}
+    .funcao-google-glass {
+        width: 70%;
+    }
+
+}
 @media (min-width: 800px) {
+    .quebra {
+        width: 55% !important;
+        display: inline-block;
+    }
+    .quebra-img {
+        display: inline-block;
+        width: 40% !important;
+    }
     .navegacao-imagem {
         overflow-y: scroll;
         padding-top: 0px;

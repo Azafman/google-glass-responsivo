@@ -7,6 +7,7 @@
      align-items: center;
      justify-content: center;
      color:rgba(0, 0, 0, .5);
+     font-size: 1em;
 }
 .field input, textarea, select {
      background: transparent;
@@ -42,6 +43,21 @@ abbr {
 #estado-usu {
      overflow-y: scroll !important;
 }
-#estado-usu:: {
-
+@media (min-width:530px) {
+     .field {
+          font-size: 1.2em;
+     }
+     
+}
+@media (min-width: 830px) {
+     .field {
+          font-size: 1.4em;
+     }
+     #dados-do-usuario {
+          max-width: 65vw !important;
+          margin: auto;
+     }
+     .field {
+          width: 100%;
+     }
 }

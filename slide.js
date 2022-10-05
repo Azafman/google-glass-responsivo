@@ -10,7 +10,7 @@ function mostrarLegenda(span) {
      }
 }
  function sizeOfThings() {
-     let larguraDispositivo = window.innerWidth;
+     const larguraDispositivo = window.innerWidth;
      let cont = 2;
      const imagens = document.querySelectorAll('span.slide-img');
      
@@ -36,20 +36,13 @@ function mostrarLegenda(span) {
           changeSpan(2);
           changeSpan(3);
           changeSpan(4);
-     } else {
-          changeSpan(0);
-          changeSpan(1);
-          changeSpan(2);
-          changeSpan(3);
-          changeSpan(4);
-          changeSpan(5);
-     }
+     } 
      function changeSpan(num) {
           
-          window.setTimeout(slideImg, 3500);;
+          window.setTimeout(slideImg, 3500);
           function slideImg() {
                if(cont > 6) cont = 1;
-               imagens[num].classList.replace(imagens[num].classList[1], `img${cont}`)
+               imagens[num].classList.replace(imagens[num].classList[1], `img${cont}`);
                imagens[num].classList.add('muda1');
                window.setTimeout(() => {changeSpan(num)}, 600);
                cont++;
