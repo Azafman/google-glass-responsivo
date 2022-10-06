@@ -1,4 +1,3 @@
-
 .funcao-google-glass {
     overflow-y: scroll;
     /* tentar mudar o scroll amanhã */
@@ -18,13 +17,37 @@
     margin-bottom: 10px;
     max-height: 275px;
     overflow-y: scroll;
+    overflow-x: hidden;
     padding-top: 10px;
     font-size: 0.8em;
+}
+.navegacao-imagem::-webkit-scrollbar {
+    background-color: white ;
+    width: 5px;
+}
+.navegacao-imagem::-webkit-scrollbar-thumb {
+    background-color:#606060b2 ;
+    border-radius: 10px;
+    height: 30px;
 }
 .figure {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.quebra {
+    width: 40% !important;
+    float: left;
+    margin: 10px 0 0 10px;
+}
+.quebra-img {
+    margin: 0;  
+    width: 40% !important;
+    float: right;
+}
+.quebra-img > img  {
+    width: 70%;
+    margin-right: 20px;
 }
 .tela {
     width: 70%;
@@ -45,14 +68,6 @@
 
 }
 @media (min-width: 800px) {
-    .quebra {
-        width: 55% !important;
-        display: inline-block;
-    }
-    .quebra-img {
-        display: inline-block;
-        width: 40% !important;
-    }
     .navegacao-imagem {
         overflow-y: scroll;
         padding-top: 0px;

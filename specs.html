@@ -9,7 +9,18 @@
     <link rel="stylesheet" href="funcao-google.css">
     <link rel="shortcut icon" href="_imagens/audio.png" type="image/x-icon">
     <link rel="stylesheet" href="funcoes.css">
-    <script src="cabecalho.js"></script>
+    <!-- 
+        <section id="conteudo">
+            <img src="_imagens/glass-esquema-marcado.jpg" alt="" usemap="#meumapa">
+            <map name="meumapa">
+                <area shape="rect" coords="179,202,270,260" href="google-glass.html#tela" alt="" target="janela">
+                <area shape="circle" coords="158,243,12" href="google-glass.html#camera" alt="" target="janela">
+                <area shape="circle" coords="73,52,12" href="google-glass.html#gadgets" alt="" target="janela">
+                <area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores" alt="" target="janela">
+            </map>
+            <iframe src="google-glass.html" frameborder="0" name="janela" id="frame-spec"></iframe>
+        </section>
+     -->
 </head>
 <body>
     <header class="cabecalho">
@@ -53,8 +64,14 @@
                     <p class="paragrafos">Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações</p>
                 </section>
                 <section class="google-glass-faz">
-                    <img src="_imagens/glass-esquema-marcado.jpg" alt="Funções do Google Glass" class="funcao-google-glass">
-                    <article class="navegacao-imagem">
+                    <img src="_imagens/glass-esquema-marcado.jpg" alt="Funções do Google Glass" class="funcao-google-glass" usemap="#mapa-funcoes">
+                    <map name="mapa-funcoes">
+                        <area shape="rect" coords="179,202,270,260"  alt="" target="janela" onclick="naveguePara()">
+                        <area shape="circle" coords="158,243,12" alt="" target="janela" onclick="naveguePara()">
+                        <area shape="circle" coords="73,52,12"  alt="" target="janela" onclick="naveguePara()">
+                        <area shape="poly" coords="28,143,83,216,84,249,27,169" alt="" target="janela" onclick="naveguePara()">
+                    </map>
+                    <article class="navegacao-imagem" name="janela">
                         <header class="cabecalho1" style="border: none;">
                             <h3 class="subtitulo-funcionalidade">Clique sobre as áreas destacadas em vermelho</h2>
                             <img src="_imagens/mao.png" alt="Mão apontando para a imagem de funções do google glass" class="img-mao">
@@ -70,7 +87,7 @@
                                     <figcaption>Tela do Google Glass</figcaption>
                                 </figure>
                             </section>
-                            <section class="funcionalidade">
+                            <section class="funcionalidade camera">
                                 <h2 class="titulo-funcionalidade">Câmera</h2>
                                 <h4 class="subtitulo-funcionalidade">Filme e fotografe a qualquer momento</h4>
                                 <p class="texto quebra">Com o Google Glass será possível tirar fotos com até 5 megapixels e gravar vídeos com 720 linhas de resolução. Os primeiros vídeos e fotos capturados com o aparelho já começaram a circular pela rede, mas até agora ninguém tem muitas informações técnicas.</p>
@@ -91,8 +108,8 @@
                             <section class="funcionalidade">
                                 <h2 class="titulo-funcionalidade">Sensores do Google Glsss</h2>
                                 <h4 class="subtitulo-funcionalidade">Quais são os dispositivos que complementam o Glass</h4>
-                                <p class="texto">Segundo a própria Google, o Glass virá com uma bateria que tem autonomia suficiente para durar um dia inteiro. Apenas algumas atividades como videoconferências e longas filmagens vão exigir um pouco mais. Além disso ele vem com WiFi, Bluetooth, 3G/4G e muito mais.</p>
-                                <figure class="figure">
+                                <p class="texto quebra">Segundo a própria Google, o Glass virá com uma bateria que tem autonomia suficiente para durar um dia inteiro. Apenas algumas atividades como videoconferências e longas filmagens vão exigir um pouco mais. Além disso ele vem com WiFi, Bluetooth, 3G/4G e muito mais.</p>
+                                <figure class="figure quebra-img">
                                     <img src="_imagens/det-bateria.jpg" alt="" class="img-explica">
                                     <figcaption>Bateria e gadgets do Google Glass</figcaption>
                                 </figure>
@@ -108,5 +125,7 @@
         <a rel="external" target="_blank" href="github.com/Azafman" class="link link2">GitHub</a> |
         <a rel="external" target="_blank" href="" class="link link2">Discord</a>
     </footer>
+    <script src="cabecalho.js"></script>
+    <script src="specs.js"></script>
 </body>
 </html>
