@@ -7,6 +7,10 @@ h2, h4, p, h3 {
     flex-direction: column-reverse;
     align-items: center;
 }
+.corpo-funcionalidade {
+    display: flex;
+    flex-direction: column;
+}
 .funcionalidade {
     margin-bottom: 500px;
 }

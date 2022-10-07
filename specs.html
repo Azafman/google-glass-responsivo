@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="funcao-google.css">
     <link rel="shortcut icon" href="_imagens/audio.png" type="image/x-icon">
-    <link rel="stylesheet" href="funcoes.css">
     <!-- 
         <section id="conteudo">
             <img src="_imagens/glass-esquema-marcado.jpg" alt="" usemap="#meumapa">
@@ -66,10 +65,13 @@
                 <section class="google-glass-faz">
                     <img src="_imagens/glass-esquema-marcado.jpg" alt="Funções do Google Glass" class="funcao-google-glass" usemap="#mapa-funcoes">
                     <map name="mapa-funcoes">
-                        <area shape="rect" coords="179,202,270,260"  alt="" target="janela" onclick="naveguePara()">
-                        <area shape="circle" coords="158,243,12" alt="" target="janela" onclick="naveguePara()">
-                        <area shape="circle" coords="73,52,12"  alt="" target="janela" onclick="naveguePara()">
-                        <area shape="poly" coords="28,143,83,216,84,249,27,169" alt="" target="janela" onclick="naveguePara()">
+                        <area shape="rect" coords="179,202,270,260"  alt="" target="janela" onclick="naveguePara(document.querySelector('header.cabecalho1'), document.querySelector('main.corpo-funcionalidade'), 'tela')">
+
+                        <area shape="circle" coords="158,243,12" alt="" target="janela" onclick="naveguePara(document.querySelector('header.cabecalho1'), document.querySelector('main.corpo-funcionalidade'), 'camera')">
+
+                        <area shape="circle" coords="73,52,12"  alt="" target="janela" onclick="naveguePara(document.querySelector('header.cabecalho1'), document.querySelector('main.corpo-funcionalidade'), 'bateria')">
+
+                        <area shape="poly" coords="28,143,83,216,84,249,27,169" alt="" target="janela" onclick="naveguePara(document.querySelector('header.cabecalho1'), document.querySelector('main.corpo-funcionalidade'), 'sensores')">
                     </map>
                     <article class="navegacao-imagem" name="janela">
                         <header class="cabecalho1" style="border: none;">
@@ -77,7 +79,7 @@
                             <img src="_imagens/mao.png" alt="Mão apontando para a imagem de funções do google glass" class="img-mao">
                         </header>
                         <main class="corpo-funcionalidade">
-                            <section class="funcionalidade">
+                            <section class="funcionalidade primeira-func tela">
                                 <h2 class="titulo-funcionalidade">Tela</h2>
                                 <h4 class="subtitulo-funcionalidade">Como o mundo vai aparecer</h4>
                                 <p class="texto">De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça.</p>
@@ -96,7 +98,7 @@
                                     <figcaption> Câmera do Google Glass </figcaption>
                                 </figure>
                             </section>
-                            <section class="funcionalidade">
+                            <section class="funcionalidade sensores>
                                 <h2 class="titulo-funcionalidade">Sensores</h2>
                                 <h4 class="subtitulo-funcionalidade">A sensibilidade de um simples óculos</h4>
                                 <p class="texto">Quem pensa que para comandar o Google Glass vai precisar de teclado e mouse, se engana redondamente. O dispositivo vem com vários tipos de sensores e microfones embutidos. Assim, para dar um comando, basta falar ou passar o dedo na lateral do óculos.</p>
@@ -105,8 +107,8 @@
                                     <figcaption>Sensores do Google Glass</figcaption>
                                 </figure>
                             </section>
-                            <section class="funcionalidade">
-                                <h2 class="titulo-funcionalidade">Sensores do Google Glsss</h2>
+                            <section class="funcionalidade bateria">
+                                <h2 class="titulo-funcionalidade">Bateria do Google Glsss</h2>
                                 <h4 class="subtitulo-funcionalidade">Quais são os dispositivos que complementam o Glass</h4>
                                 <p class="texto quebra">Segundo a própria Google, o Glass virá com uma bateria que tem autonomia suficiente para durar um dia inteiro. Apenas algumas atividades como videoconferências e longas filmagens vão exigir um pouco mais. Além disso ele vem com WiFi, Bluetooth, 3G/4G e muito mais.</p>
                                 <figure class="figure quebra-img">
