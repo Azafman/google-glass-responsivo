@@ -23,6 +23,7 @@
     display: flex;
     flex-direction: column;
 }
+
 .navegacao-imagem::-webkit-scrollbar {
     background-color: white ;
     width: 5px;
@@ -84,9 +85,11 @@ h2, h4, p, h3 {
 }
 .funcionalidade {
     margin-bottom: 500px;
+    order: 5;
 }
 .primeira-func {
     margin-top: 500px;
+    width: 100% !important;
 }
 .titulo-funcionalidade {
     background-color: #888888;
