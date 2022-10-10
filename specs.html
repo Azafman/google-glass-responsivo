@@ -8,22 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="funcao-google.css">
     <link rel="shortcut icon" href="_imagens/audio.png" type="image/x-icon">
-    <!-- 
-        <section id="conteudo">
-            <img src="_imagens/glass-esquema-marcado.jpg" alt="" usemap="#meumapa">
-            <map name="meumapa">
-                <area shape="rect" coords="179,202,270,260" href="google-glass.html#tela" alt="" target="janela">
-                <area shape="circle" coords="158,243,12" href="google-glass.html#camera" alt="" target="janela">
-                <area shape="circle" coords="73,52,12" href="google-glass.html#gadgets" alt="" target="janela">
-                <area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores" alt="" target="janela">
-                shape="rect" coords="179,202,270,260"
-                    shape="circle" coords="158,243,12"
-                    shape="circle" coords="73,52,12
-                    shape="poly" coords="28,143,83,216,84,249,27,169"
-            </map>
-            <iframe src="google-glass.html" frameborder="0" name="janela" id="frame-spec"></iframe>
-        </section>
-     -->
 </head>
 <body>
     <header class="cabecalho">
@@ -67,20 +51,32 @@
                     <p class="paragrafos">Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações</p>
                 </section>
                 <section class="google-glass-faz">
-                    <img src="_imagens/glass-esquema-marcado.jpg" alt="Funções do Google Glass" class="funcao-google-glass" usemap="#mapa-funcoes">
+                    <!-- <img src="_imagens/glasss-equema-marcado.jpg" alt="Funções do Google Glass" class="funcao-google-glass" usemap="#mapa-funcoes">
+                      -->
+                    <picture>
+                        <source media="(max-width: 450px)" srcset="_imagens/glass-esquema-marcado1.jpg" type="image/jpg" usemap="#mapa-funcoes" class="funcao-google-glass" alt="Funções do Google">
+                        <source media="(max-width: 600px)" srcset="_imagens/glass-esquema-marcado2.jpg" type="image/jpg" usemap="#mapa-funcoes" class="funcao-google-glass" alt="Funções do Google">
+                        <source media="(max-width: 700px)" srcset="_imagens/glass-esquema-marcado3.jpg" type="image/jpg" usemap="#mapa-funcoes" class="funcao-google-glass" alt="Funções do Google">
+                        <source media="(max-width: 850px)" srcset="_imagens/glass-esquema-marcado4.jpg" type="image/jpg" usemap="#mapa-funcoes" class="funcao-google-glass" alt="Funções do Google">
+                        <source media="(min-width: 850px)" srcset="_imagens/glass-esquema-marcado5.jpg" type="image/jpg" usemap="#mapa-funcoes" class="funcao-google-glass" alt="Funções do Google">
+                        <source media="(min-width: 950px)" srcset="_imagens/glass-esquema-marcado6.jpg" type="image/jpg" usemap="#mapa-funcoes" class="funcao-google-glass" alt="Funções do Google">
+                        <source media="(min-width: 1050px)" srcset="_imagens/glass-esquema-marcado7.jpg" type="image/jpg" usemap="#mapa-funcoes" class="funcao-google-glass" alt="Funções do Google">
+                        <img src="_imagens/glasss-equema-marcado8.jpg" alt="Funções do Google Glass" class="funcao-google-glass" usemap="#mapa-funcoes">
+                    </picture>
+                    
                     <map name="mapa-funcoes">
-                        <area shape="rect" coords="179,202,270,260"  alt="" target="janela" onclick="naveguePara(document.querySelector('header.cabecalho1'), document.querySelector('main.corpo-funcionalidade'), 'tela')">
+                        <area coords="274,246,179,274,184,204,269,192" shape="poly"  alt="" target="janela" onclick="naveguePara(document.querySelector('header.cabecalho1'), document.querySelector('main.corpo-funcionalidade'), 'tela')">
 
-                        <area shape="circle" coords="158,243,12" alt="" target="janela" onclick="naveguePara(document.querySelector('header.cabecalho1'), document.querySelector('main.corpo-funcionalidade'), 'camera')">
+                        <area coords="155,242,18" shape="circle" alt="" target="janela" onclick="naveguePara(document.querySelector('header.cabecalho1'), document.querySelector('main.corpo-funcionalidade'), 'camera')">
 
-                        <area shape="circle" coords="73,52,12"  alt="" target="janela" onclick="naveguePara(document.querySelector('header.cabecalho1'), document.querySelector('main.corpo-funcionalidade'), 'bateria')">
+                        <area coords="78,52,23" shape="circle"  alt="" target="janela" onclick="naveguePara(document.querySelector('header.cabecalho1'), document.querySelector('main.corpo-funcionalidade'), 'bateria')">
 
-                        <area shape="poly" coords="28,143,83,216,84,249,27,169" alt="" target="janela" onclick="naveguePara(document.querySelector('header.cabecalho1'), document.querySelector('main.corpo-funcionalidade'), 'sensores')">
+                        <area coords="27,133,90,206,87,265,17,172" shape="poly" alt="" target="janela" onclick="naveguePara(document.querySelector('header.cabecalho1'), document.querySelector('main.corpo-funcionalidade'), 'sensores')">
                     </map>
                     <article class="navegacao-imagem" name="janela">
                         <header class="cabecalho1" style="border: none;">
                             <h3 class="subtitulo-funcionalidade">Clique sobre as áreas destacadas em vermelho</h2>
-                            <img src="_imagens/mao.png" alt="Mão apontando para a imagem de funções do google glass" class="img-mao">
+                            <img src="_imagens/mao.png" alt="Mão apontando para  usemap="#mapa-funcoes"s do google glass" class="img-mao" class="funcao-google-glass" alt="Funções do Google">
                         </header>
                         <main class="corpo-funcionalidade">
                             <section class="funcionalidade primeira-func tela">
