@@ -39,7 +39,7 @@ body {
     color: var(--cor2);
 }
 .nav {
-    right: 20px;
+    right: 10px;
     background-color: var(--cor3);
     /* display: none; */
     /* stackoverflow me salvou -> com o display: none em .av e display:block em nav1, o efeito de transition não estava fucncionando; então deixei somente o visibility:hidden e opacity */
