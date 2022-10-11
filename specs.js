@@ -7,14 +7,14 @@ function naveguePara(cabecalho, main, localMap) {
      }
      document.querySelector(`section.${localMap}`).classList.add('order1');
      // console.log(document.getElementsByTagName('map')[0].children[0].getAttribute('coords'))
-     determineCoords(document.getElementsByTagName('map')[0].children, screen.width);
 }
 function determineCoords(mapas, largura) {
      if(largura > 1150) {
-          mapas[0].getAttribute('coords')
-          mapas[1].getAttribute('coords')
-          mapas[2].getAttribute('coords')
-          mapas[3].getAttribute('coords')
+          mapas[0].setAttribute('coords',)
+          // mapas[1].setAttribute('coords',)
+          // mapas[2].setAttribute('coords',)
+          // mapas[3].setAttribute('coords',)
+          // console.log(mapas[0].getAttribute('coords'))
           
      } else if(largura > 1050 && largura < 1150) {
           mapas[0].getAttribute('coords')
@@ -40,7 +40,7 @@ function determineCoords(mapas, largura) {
           mapas[2].getAttribute('coords')
           mapas[3].getAttribute('coords')
           
-     } else if(largura <= 700 && largura > 600) {
+     } else if(largura > 600 && largura <= 700) {
           mapas[0].getAttribute('coords')
           mapas[1].getAttribute('coords')
           mapas[2].getAttribute('coords')
@@ -53,3 +53,6 @@ function determineCoords(mapas, largura) {
           mapas[3].getAttribute('coords')
      }
 }
+(function(){
+     determineCoords(document.getElementsByTagName('map')[0].children, screen.width);
+})(); 
