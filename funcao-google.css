@@ -110,7 +110,9 @@ h2, h4, p, h3 {
 article {
     margin-top: 10px;
 }
-
+.cursor:hover {
+    cursor: grab;
+}
 
 @media (min-width: 600px){
     .navegacao-imagem{

@@ -20,6 +20,9 @@ body {
 .img-scroll {
     display: none;
 }
+.imgs {
+    display: none;
+}
 .tema-do-site {
     color: var(--cor2);
     font-size: 0.9em;
@@ -40,7 +43,7 @@ body {
 }
 .nav {
     right: 10px;
-    background-color: var(--cor3);
+    /* background-color: var(--cor3); */
     /* display: none; */
     /* stackoverflow me salvou -> com o display: none em .av e display:block em nav1, o efeito de transition não estava fucncionando; então deixei somente o visibility:hidden e opacity */
     visibility: hidden;
@@ -182,7 +185,7 @@ body {
         opacity: 1;
         min-width: 80%;
         padding: 0;
-        top: -60px;
+        top: -65px;
         right: 0px;
     }
      .flex-container {
@@ -207,6 +210,40 @@ body {
     }
     .img-scroll {
         display: block;
+    }
+    div#imgs {
+        height: 110px;
+        width: 110px;
+        position: absolute; 
+        display: block;
+        right: 0;
+        top: -10px;
+    }
+    #imgs > .imgs {
+        display: block;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        animation: mudaNavegacao;
+        animation-iteration-count: infinite;
+        animation-duration: 25s;
+        animation-delay: 5s;
+        background-size: contain !important;
+        background-image: url(_imagens/home.png);
+    }
+}
+@keyframes mudaNavegacao {
+    20% {
+        background-image: url(_imagens/fotos.png);
+    } 40% {
+        background-image: url(_imagens/especificacoes-02.png);
+    } 65% {
+        background-image: url(_imagens/contato.png);
+    } 80% {
+        background-image: url(_imagens/multimidia.png);
+    }
+    100% {
+        background-image: url(_imagens/home.png);   
     }
 }
 @media (min-width: 940px) {

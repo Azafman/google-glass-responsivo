@@ -8,6 +8,7 @@ function naveguePara(cabecalho, main, localMap) {
      document.querySelector(`section.${localMap}`).classList.add('order1');
 }
 function determineCoords(mapas, largura) {
+     
      if(largura > 1150) {
           mapas[0].setAttribute('coords','298,216,198,294')
           mapas[1].setAttribute('coords','173,268,18')
@@ -26,7 +27,7 @@ function determineCoords(mapas, largura) {
           mapas[3].setAttribute('coords','13,176,88,269,99,222,31,145')
           
      } else if(largura > 600 && largura < 700) {
-          mapas[3].setAttribute('coords','83,252,83,198,21,126,11,158')
+          mapas[3].setAttribute('coords','27,126,82,202,82,254,19,158')
           mapas[1].setAttribute('coords','150,235,17')
           mapas[2].setAttribute('coords','72,51,17')
           mapas[0].setAttribute('coords','257,189,171,247')
@@ -38,7 +39,6 @@ function determineCoords(mapas, largura) {
           mapas[0].setAttribute('coords','123,189,191,137')
           
      } else {
-          // corrigir
           mapas[3].setAttribute('coords', '52,114,16,68,1,95,47,150')
           mapas[1].setAttribute('coords','84,133,13')
           mapas[2].setAttribute('coords','42,29,17')
