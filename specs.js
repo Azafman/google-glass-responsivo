@@ -39,7 +39,7 @@ function determineCoords(mapas, largura) {
           mapas[0].setAttribute('coords','123,189,191,137')
           
      } else {
-          mapas[3].setAttribute('coords', '52,114,16,68,1,95,47,150')
+          mapas[3].setAttribute('coords', '12,64,52,113,47,153,5,96')
           mapas[1].setAttribute('coords','84,133,13')
           mapas[2].setAttribute('coords','42,29,17')
           mapas[0].setAttribute('coords','97,148,150,102')

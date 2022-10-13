@@ -7,7 +7,6 @@
     <title>Tudo Sobre o Google Glass</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contato.css">
-    <script src="cabecalho.js"></script>
 </head>
 <body>
     <header class="cabecalho">
@@ -156,12 +155,15 @@
                                         <input type="color" name="" id="cor-pedido">
                                     </p>
                                     <p>
-                                        <label for="qtd-Glass">Quantidade: </label>
-                                        <input type="number" name="" id="qtd-Glass" min="0" max="50">   
+                                        <label for="qtd-Glass1">Quantidade: </label>
+                                        <input id="qtd-Glass1" class="calcValue" type="number" name="" min="0" max="50">   
                                     </p>
                                     <p>
                                         <label for="tot-Glass">Preço Total: </label>
-                                        <input type="number" name="" disabled id="qtd-Glass" min="0" max="50">
+                                        <input type="text" name="" disabled id="tot-Glass" min="0" max="50">
+                                    </p>
+                                    <p>
+                                        <button type="button" class="calc" onclick="calcularCompra(document.querySelector('input#qtd-Glass1').value)">Calcular</button>
                                     </p>
                                 </fieldset>
                             </section>
@@ -177,6 +179,7 @@
         <a rel="external" target="_blank" href="github.com/Azafman" class="link link2">GitHub</a> |
         <a rel="external" target="_blank" href="" class="link link2">Discord</a>
     </footer>
+    <script src="cabecalho.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

@@ -43,7 +43,7 @@ body {
 }
 .nav {
     right: 10px;
-    /* background-color: var(--cor3); */
+    background-color: var(--cor3);
     /* display: none; */
     /* stackoverflow me salvou -> com o display: none em .av e display:block em nav1, o efeito de transition não estava fucncionando; então deixei somente o visibility:hidden e opacity */
     visibility: hidden;
@@ -187,6 +187,7 @@ body {
         padding: 0;
         top: -65px;
         right: 0px;
+        background: transparent;
     }
      .flex-container {
         flex-direction: row;
@@ -228,22 +229,22 @@ body {
         animation-iteration-count: infinite;
         animation-duration: 25s;
         animation-delay: 5s;
-        background-size: contain !important;
-        background-image: url(_imagens/home.png);
+        transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+        background-image: url(_imagens/home-peq.png);
     }
 }
 @keyframes mudaNavegacao {
     20% {
-        background-image: url(_imagens/fotos.png);
+        background-image: url(_imagens/fotos-peq.png);
     } 40% {
-        background-image: url(_imagens/especificacoes-02.png);
+        background-image: url(_imagens/especificacoes-0-peq.png);
     } 65% {
-        background-image: url(_imagens/contato.png);
+        background-image: url(_imagens/contato-peq.png);
     } 80% {
-        background-image: url(_imagens/multimidia.png);
+        background-image: url(_imagens/multimidia-peq.png);
     }
     100% {
-        background-image: url(_imagens/home.png);   
+        background-image: url(_imagens/home-peq.png);   
     }
 }
 @media (min-width: 940px) {
