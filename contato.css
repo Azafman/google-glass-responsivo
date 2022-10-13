@@ -43,6 +43,61 @@ abbr {
 #estado-usu {
      overflow-y: scroll !important;
 }
+button[type="submit"] {
+     position: relative;
+     width: 130px;
+     border: 1px solid #383838;
+     height: 55px;
+     padding-left: 40px;
+     overflow: hidden;
+     float: right;
+     font-size: 1.2em;
+     border-radius: 50px;
+     box-sizing: border-box;
+     background-color: #606060;
+     color: aliceblue;
+     font-family: sans-serif;
+     transition: .5s ease-in-out;
+     letter-spacing: 1px;
+}
+button[type="submit"]:hover {
+     padding-left: 0;
+     padding-right: 40px;
+     cursor: pointer;
+     z-index: 10;
+}
+button[type="submit"]:hover::before {
+     transform: translateX(178px) skewX(30deg);
+}
+button[type="submit"]::before {
+     content: '';
+     width: 65px;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     background: rgba(0, 0, 0, 0.666);
+     transition: .75s ease-in-out; 
+     transform: translateX(-178px) skewX(30deg);
+}
+button[type="submit"] > span {
+     width: 40px;
+     height: 40px;
+     background: white;
+     position: absolute;
+     left: 5px;
+     top: 5px;
+     transition: .5s ease-in-out;
+     border-radius: 50%;
+     color: #383838;
+     font-size: 1.4em;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+button[type="submit"]:hover > span {
+     left: calc(100% - 40px - 5px);
+}
 @media (min-width:530px) {
      .field {
           font-size: 1.2em;
