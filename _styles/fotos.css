@@ -51,32 +51,32 @@
     content: 'Informações importantes';
 }
 .img1 {
-    background-image: url('_imagens/galeria-01.jpg') !important;
+    background-image: url('../_imagens/galeria-01.jpg') !important;
 }
 .img2 {
     display: none !important;
     /* visibility: hidden   ; */
-    background-image: url('_imagens/galeria-02.jpg') !important;
+    background-image: url('../_imagens/galeria-02.jpg') !important;
 }
 .img3 {
     display: none !important;
     /* visibility: hidden   ; */
-    background-image: url('_imagens/galeria-03.jpg') !important;
+    background-image: url('../_imagens/galeria-03.jpg') !important;
 }
 .img4 {
     display: none !important;
     /* visibility: hidden   ; */
-    background-image: url('_imagens/galeria-04.jpg') !important;
+    background-image: url('../_imagens/galeria-04.jpg') !important;
 }
 .img5 {
     display: none !important;
     /* visibility: hidden   ; */
-    background-image: url('_imagens/galeria-05.jpg') !important;
+    background-image: url('../_imagens/galeria-05.jpg') !important;
 }
 .img6 {
     display: none !important;
     /* visibility: hidden   ; */
-    background-image: url('_imagens/galeria-06.jpg') !important;
+    background-image: url('../_imagens/galeria-06.jpg') !important;
 }
 .muda1 {
     display: inline-block !important;
