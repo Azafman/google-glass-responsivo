@@ -16,6 +16,17 @@ body {
 .cabecalho {
     margin: 0;
     border-bottom: 1px solid black;
+    
+}
+@keyframes scrollInit {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    } 100% {
+        opacity: 1;
+    }
 }
 .img-scroll {
     display: none;
@@ -131,6 +142,15 @@ body {
     padding: 15px;
     box-sizing: border-box;
 }
+.scroll {
+    visibility: none !important;
+    opacity: 0;
+}
+.event-start {
+    transition: 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    opacity: 1 !important;
+    visibility: visible !important;
+}
 .explicacoes {
     color: var(--cor2); 
     background-color: var(--cor3);
@@ -152,6 +172,7 @@ body {
     padding: 15px;
     text-align: center;
     border-top: 1px solid black;
+    animation: 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s 1 scrollInit;
 }
 .rodape > p {
     margin: 7.5px
@@ -233,6 +254,13 @@ body {
         background-image: url(../_imagens/home-peq.png);
     }
 }
+@media (min-width: 940px) {
+    body {
+        padding: 0 6.8vw;
+        box-sizing: border-box;
+        background-color: white;
+    }
+}
 @keyframes mudaNavegacao {
     20% {
         background-image: url(../_imagens/fotos-peq.png);
@@ -245,12 +273,5 @@ body {
     }
     100% {
         background-image: url(../_imagens/home-peq.png);   
-    }
-}
-@media (min-width: 940px) {
-    body {
-        padding: 0 6.8vw;
-        box-sizing: border-box;
-        background-color: white;
     }
 }
