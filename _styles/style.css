@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2? family= Noto+Sans:wght@300 & display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Noto+Sans:wght@300&family=Titillium+Web:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2? family= Noto+Sans:wght@300 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Noto+Sans:wght@300&family=Titillium+Web:wght@300&display=swap'); */
 :root {
     --cor1: #AAAAAA;
     --cor2: #606060;
@@ -16,17 +16,6 @@ body {
 .cabecalho {
     margin: 0;
     border-bottom: 1px solid black;
-    
-}
-@keyframes scrollInit {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    } 100% {
-        opacity: 1;
-    }
 }
 .img-scroll {
     display: none;
@@ -55,8 +44,6 @@ body {
 .nav {
     right: 10px;
     background-color: var(--cor3);
-    /* display: none; */
-    /* stackoverflow me salvou -> com o display: none em .av e display:block em nav1, o efeito de transition não estava fucncionando; então deixei somente o visibility:hidden e opacity */
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -147,7 +134,7 @@ body {
     opacity: 0;
 }
 .event-start {
-    transition: 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: 1.75s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     opacity: 1 !important;
     visibility: visible !important;
 }

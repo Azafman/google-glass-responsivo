@@ -1,14 +1,15 @@
-function naveguePara(cabecalho, main, localMap) {
-     cabecalho.classList.add('order2')
-     main.children[0].style.marginTop = 0;
+const header = document.querySelector('.cabecalho1');
+const main = document.querySelector('.corpo-funcionalidade');
+const childMain = Array.from(main.children);
 
-     for(let c = 0; c < main.children.length; c++) {
-          main.children[c].classList.remove('order1')
-     }
-     document.querySelector(`section.${localMap}`).classList.add('order1');
+function naveguePara(localMap) {
+     header.classList.add('order2');
+     childMain[0].style.marginTop = 0;
+     childMain.forEach(el => el.classList.remove('order1'));
+     document.querySelector(`section.${localMap}`)
+     .classList.add('order1');
 }
 function determineCoords(mapas, largura) {
-     console.log(largura);
      if(largura > 1150) {
           mapas[0].setAttribute('coords','298,216,198,294')
           mapas[1].setAttribute('coords','173,268,18')
@@ -46,7 +47,6 @@ function determineCoords(mapas, largura) {
      }        
 }
 
-(function() {
-     determineCoords(document.getElementsByTagName('map')[0].children, screen.width)
-})();
-
+window.addEventListener('load', e => {
+     determineCoords(document.querySelectorAll('area.cursor'), screen.width);
+});

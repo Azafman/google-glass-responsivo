@@ -1,12 +1,13 @@
-function iniciar() {
+window.addEventListener('load', e => {
      sizeOfThings();
-}
+})
+
 function mostrarLegenda(span) {
-     const spanLeg = document.styleSheets[1].cssRules[3]
+     const spanLeg = document.styleSheets[1].cssRules[3];
      if(spanLeg.style.opacity != 1) {
-          spanLeg.style.opacity = 1
+          spanLeg.style.opacity = 1;
      } else {
-          spanLeg.style.opacity = 0
+          spanLeg.style.opacity = 0;
      }
 }
  function sizeOfThings() {
