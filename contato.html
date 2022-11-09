@@ -56,19 +56,19 @@
                                     <label for="nome-usuario">
                                          <p>
                                             <span>Nome:<abbr title="required">*</abbr></span>
-                                            <input type="text" name="" id="nome-usuario">
+                                            <input type="text" name="" id="nome-usuario" class="required-input txt nome">
                                         </p>
                                     </label>
                                     <label for="senha-usuario">
                                         <p>
                                             <span>Senha:<abbr title="required">*</abbr></span>
-                                            <input type="password" name="" id="senha-usuario">
+                                            <input type="password" name="" id="senha-usuario" class="required-input txt">
                                         </p>
                                     </label>
                                     <label for="email-usuario">
                                         <p>
                                             <span>Email:<abbr title="required">*</abbr></span>
-                                            <input type="email" name="" id="email-usuario">
+                                            <input type="email" name="" id="email-usuario" class="required-input txt">
                                         </p>
                                     </label>
                                     <fieldset>
@@ -95,15 +95,15 @@
                                     <legend>Endereço</legend>
                                     <p>
                                         <label for="logradouro">Logradouro</label>
-                                        <input type="text" name="" id="Logradouro">
+                                        <input type="text" name="" id="Logradouro" class="required-input txt">
                                     </p>
                                     <p>
                                         <label for="numero-usuario">Número: </label>
-                                        <input type="tel" name="" id="numero-usuario">
+                                        <input type="number" name="" id="numero-usuario" class="required-input txt">
                                     </p>
                                     <p>
                                         <label for="estado-usu">Estado</label>
-                                        <select name="" id="estado-usu">
+                                        <select name="" id="estado-usu" class="required-input txt">
                                                 <option value=""></option>
                                                 <option value="SP">São Paulo</option>
                                                 <option value="MG">Minas Gerais</option>
@@ -115,7 +115,7 @@
                                     </p>
                                     <p>
                                         <label for="cidade">Cidade:</label>
-                                        <input type="text" name="" id="cidade" list="cidade-U" maxlength="40">
+                                        <input type="text" name="" id="cidade" list="cidade-U" maxlength="40" class="required-input txt">
                                         <datalist id="cidade-U">
                                             <option value="Guarulhos"></option>
                                             <option value="Porto Alegre"></option>
@@ -126,7 +126,7 @@
                                             <option value="São Paulo"></option>
                                         </datalist>
                                     </p>
-                                    <!-- A diferença entre um <select> e um <datalist> é que no select vc determina as opções que o usuário é "obrigado" a escolher entre elas. Já o datalist vc oferece algumas sugestões para o usuário, mas ele é livre para digitar o que quiser, ou seja, é uma lista pre-definida, não uma lista pre-determinada como a select . -->
+                            
                                 </fieldset>
                             </section>
                             <section class="dados-usuaris">
@@ -147,16 +147,16 @@
                                     <legend>Pedido Google Glass</legend>
 
                                     <p>
-                                        <input type="checkbox" name="" id="resposta-pedido">
+                                        <input type="checkbox" name="" id="resposta-pedido" class="required-input">
                                         <label for="resposta-pedido">Gostaria de adquirir um Google Glass quando disponível</label>
                                     </p>
                                     <p>
                                         <label for="cor-pedido">Cor: </label>
-                                        <input type="color" name="" id="cor-pedido">
+                                        <input type="color" name="" id="cor-pedido" required>
                                     </p>
                                     <p>
                                         <label for="qtd-Glass1">Quantidade: </label>
-                                        <input id="qtd-Glass1" class="calcValue" type="number" name="" min="0" max="50">   
+                                        <input id="qtd-Glass1" class="calcValue" type="number" name="" min="0" max="50" class="required-input txt">   
                                     </p>
                                     <p>
                                         <label for="tot-Glass">Preço Total: </label>
@@ -180,6 +180,7 @@
         <a rel="external" target="_blank" href="" class="link link2">Discord</a>
     </footer>
     <script src="_js/cabecalho.js"></script>
+    <script src="_js/form.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
