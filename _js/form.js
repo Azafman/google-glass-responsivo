@@ -4,10 +4,8 @@ const startedValidaty = function(e) {
 
      allVallid = emptyFields(document.querySelectorAll('.required-input'))
      allVallid = fieldNotVerbal(
-          document.querySelector(`input[type="checkbox"`), 
-          document.querySelector('#qtd-Glass1')
-     );
-
+          document.querySelector(`input[type="checkbox"`)
+     ); 
 
      // if(allVallid) e.target.submit();
 }
@@ -18,11 +16,9 @@ const reportError = (element, msg) => {
      element.insertAdjacentElement('beforeend', div);
 }
 const fieldNotVerbal = (inputChecked) => {
-     if(!inputChecked.checked) {
-          inputChecked.setCustomValidity("Se você deseja realizar a compra, este campo é obrigatório!");
-          return false;
-     }
-     return true;
+     if(inputChecked.checked) return true;
+     inputChecked.setCustomValidity("Se você deseja realizar a compra, este campo é obrigatório!");
+     return false;
 }
 window.addEventListener('load', e => {
      const form = document.querySelector("#dados-do-usuario");
@@ -73,4 +69,15 @@ function emptyFields(inputsRequireds) {
           } 
      })
      return validOrNot;
+}
+function startingPrice() {
+
+}
+function calculatePrice() {
+     const valueField = document.querySelector('.calcValue');
+     if(valueField.value) {
+          document.querySelector('#tot-Glass').value = `R$ ${valueField * 647,99}`;
+     }
+     valueField.value = 1;
+     return valueField;
 }
