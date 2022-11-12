@@ -4,10 +4,10 @@ const startedValidaty = function(e) {
 
      allVallid = emptyFields(document.querySelectorAll('.required-input'))
      allVallid = fieldNotVerbal(
-          document.querySelector(`input[type="checkbox"`)
+          document.querySelector(`input[type="checkbox"]`)
      ); 
 
-     // if(allVallid) e.target.submit();
+     if(allVallid) setTimeout( () => e.target.submit(), 500);
 }
 const reportError = (element, msg) => {
      const div = document.createElement('div');
@@ -24,8 +24,23 @@ window.addEventListener('load', e => {
      const form = document.querySelector("#dados-do-usuario");
 
      form.addEventListener('submit', startedValidaty);
-
+     
 })
+document.addEventListener('click', e => {
+     const element = e.target;
+     if(element.classList.contains("checkbox")) {
+          addOneValue();
+     }
+     if(element.classList.contains("calc")) {
+          calculatePrice();
+     }
+})
+function addOneValue() {
+     const quantidade =  document.querySelector('.calcValue');
+     if(!quantidade.value) {
+          quantidade.value = 1;
+     }
+}
 function emptyFields(inputsRequireds) {
      const generatorPhrase = (el, anotherFieldExists, num1, num2) => {
           let nameField = el.previousElementSibling.innerText.toLowerCase();
@@ -70,14 +85,19 @@ function emptyFields(inputsRequireds) {
      })
      return validOrNot;
 }
-function startingPrice() {
-
-}
 function calculatePrice() {
      const valueField = document.querySelector('.calcValue');
+     const chieldOfSam = valueField.parentElement.parentElement.children[3];
+
      if(valueField.value) {
-          document.querySelector('#tot-Glass').value = `R$ ${valueField * 647,99}`;
+          document.querySelector('#tot-Glass').value = `R$ ${valueField.value * 647.99}`;
+          if(chieldOfSam.children[2]) chieldOfSam.children[2].remove();
+     } else {
+          if(!chieldOfSam.children[2]) {
+               reportError(
+                    valueField.parentElement.parentElement.children[3],
+                    'Especifique uma quantidade primeiro'
+               );
+          }
      }
-     valueField.value = 1;
-     return valueField;
 }

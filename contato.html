@@ -147,7 +147,7 @@
                                     <legend>Pedido Google Glass</legend>
 
                                     <p>
-                                        <input type="checkbox" name="" id="resposta-pedido" class="">
+                                        <input type="checkbox" name="" id="resposta-pedido" class="checkbox">
                                         <label for="resposta-pedido">Gostaria de adquirir um Google Glass quando disponível</label>
                                     </p>
                                     <p>
@@ -156,14 +156,14 @@
                                     </p>
                                     <p>
                                         <label for="qtd-Glass1">Quantidade: </label>
-                                        <input id="qtd-Glass1" class="calcValue" type="number" name="" min="0" max="50" class="required-input txt">   
+                                        <input id="qtd-Glass1"  type="number" name="" min="0" max="50" class="required-input calcValue">   
                                     </p>
                                     <p>
                                         <label for="tot-Glass">Preço Total: </label>
                                         <input type="text" name="" disabled id="tot-Glass" min="0" max="50">
                                     </p>
                                     <p>
-                                        <button type="button" class="calc" onclick="calcularCompra(document.querySelector('input#qtd-Glass1').value)">Calcular</button>
+                                        <button type="button" class="calc">Calcular</button>
                                     </p>
                                 </fieldset>
                             </section>
