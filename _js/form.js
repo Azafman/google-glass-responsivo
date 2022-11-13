@@ -1,13 +1,12 @@
 const startedValidaty = function(e) {
      e.preventDefault();
      let allVallid = true;
+     let allVallidTwo = true;
 
-     allVallid = emptyFields(document.querySelectorAll('.required-input'))
-     allVallid = fieldNotVerbal(
-          document.querySelector(`input[type="checkbox"]`)
-     ); 
+     allVallid = emptyFields(document.querySelectorAll('.required-input'));
+     allVallidTwo = fieldNotVerbal(document.querySelector(`input[type="checkbox"]`)); 
 
-     if(allVallid) setTimeout( () => e.target.submit(), 500);
+     if(allVallid && allVallidTwo) setTimeout( () => e.target.submit(), 500);
 }
 const reportError = (element, msg) => {
      const div = document.createElement('div');
@@ -16,9 +15,14 @@ const reportError = (element, msg) => {
      element.insertAdjacentElement('beforeend', div);
 }
 const fieldNotVerbal = (inputChecked) => {
-     if(inputChecked.checked) return true;
-     inputChecked.setCustomValidity("Se você deseja realizar a compra, este campo é obrigatório!");
-     return false;
+     if(!inputChecked.checked) {
+          reportError(inputChecked.parentElement, "Se você deseja realizar a compra, este campo é obrigatório!");
+          if(inputChecked.parentElement.children[3]) {
+               inputChecked.parentElement.children[3].remove();
+          }
+          return false;
+     } 
+     return true;
 }
 window.addEventListener('load', e => {
      const form = document.querySelector("#dados-do-usuario");
