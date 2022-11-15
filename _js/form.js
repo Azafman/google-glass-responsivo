@@ -6,13 +6,23 @@ const startedValidaty = function(e) {
      allVallid = emptyFields(document.querySelectorAll('.required-input'));
      allVallidTwo = fieldNotVerbal(document.querySelector(`input[type="checkbox"]`)); 
 
-     if(allVallid && allVallidTwo) setTimeout( () => e.target.submit(), 500);
+     if(allVallid && allVallidTwo) {
+          setTimeout( () => e.target.submit(), 500)
+          confirm('DADOS ENVIADOS!');
+     }
+     else {
+          reportError(document.querySelector('form'), 'Por favor, preencha todos os campos acima de forma válida');
+     }
 }
 const reportError = (element, msg) => {
-     const div = document.createElement('div');
-     div.innerText = msg;
-     div.classList.add('caixa-vazia');
-     element.insertAdjacentElement('beforeend', div);
+     const sizeOfElement = Array.from(element.children);
+     if(!(sizeOfElement[sizeOfElement.length - 1].classList.contains('caixa-vazia'))) {
+          const div = document.createElement('div');
+          div.innerText = msg;
+          div.classList.add('caixa-vazia');
+          element.insertAdjacentElement('beforeend', div);
+     }
+
 }
 const fieldNotVerbal = (inputChecked) => {
      if(!inputChecked.checked) {
@@ -21,7 +31,11 @@ const fieldNotVerbal = (inputChecked) => {
                inputChecked.parentElement.children[3].remove();
           }
           return false;
-     } 
+     }
+     if(inputChecked.parentElement.children[2]) {
+          inputChecked.parentElement.children[2].remove();
+     }
+     
      return true;
 }
 window.addEventListener('load', e => {
@@ -45,18 +59,18 @@ function addOneValue() {
           quantidade.value = 1;
      }
 }
-function emptyFields(inputsRequireds) {
-     const generatorPhrase = (el, anotherFieldExists, num1, num2) => {
-          let nameField = el.previousElementSibling.innerText.toLowerCase();
-          if(nameField.indexOf('*') !== -1) {
-               nameField = nameField.replace(':*', '');
-          }
-          if(!anotherFieldExists) {
-               return `${nameField} não pode ficar em branco`;
-          } else {
-               return `${nameField} deve conter entre ${num1} à ${num2} caracteres.`;
-          }
+const generatorPhrase = (el, anotherFieldExists, num1, num2) => {
+     let nameField = el.previousElementSibling.innerText.toLowerCase();
+     if(nameField.indexOf('*') !== -1) {
+          nameField = nameField.replace(':*', '');
      }
+     if(!anotherFieldExists) {
+          return `${nameField} não pode ficar em branco`;
+     } else {
+          return `${nameField} deve conter entre ${num1} à ${num2} caracteres.`;
+     }
+}
+function emptyFields(inputsRequireds) {
      let validOrNot = true;
      inputsRequireds.forEach((el) => {
           if(el.nextElementSibling) el.nextElementSibling.remove();

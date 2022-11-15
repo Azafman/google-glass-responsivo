@@ -134,7 +134,7 @@ body {
     opacity: 0;
 }
 .event-start {
-    transition: 3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: 2.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     opacity: 1 !important;
     visibility: visible !important;
 }
@@ -178,6 +178,13 @@ body {
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
+}
+@media (max-width: 850px) {
+    div#imgs {
+        display: flex;
+        justify-content: center;
+    }
+    
 }
 
 @media (min-width: 850px) {

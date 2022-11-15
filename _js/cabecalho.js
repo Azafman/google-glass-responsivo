@@ -16,21 +16,26 @@ document.addEventListener('click', (e) => {
      }
 
 })
+function navegationForPages() {
+     const pagsSite = document.querySelectorAll('.link');
+     const imageMenu = document.querySelector('.img-menu');
+     
+     const imageChange = image => {
+          imageMenu.setAttribute('src',`_imagens/${image}`);
+     }
+     
+     pagsSite.forEach( el => {
+          el.addEventListener('mouseenter', e => {
+               const imageToChange = e.target.getAttribute('href').replace('html','png');
+               imageChange(imageToChange);
+          })
+     })
+
+}
 function start() {
      appearItem(document.querySelectorAll(".scroll"));
+     navegationForPages()
      if(window.innerWidth > 850) {
-          const pagsSite = document.querySelectorAll('.link');
-          const imageMenu = document.querySelector('.img-menu');
-          
-          const imageChange = image => {
-               imageMenu.setAttribute('src',`_imagens/${image}`);
-          }
-          
-          pagsSite.forEach( el => {
-               el.addEventListener('mouseenter', e => {
-                    const imageToChange = e.target.getAttribute('href').replace('html','png');
-                    imageChange(imageToChange);
-               })
-          })
+
      } 
 }
