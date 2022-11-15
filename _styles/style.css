@@ -1,5 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2? family= Noto+Sans:wght@300 & display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Noto+Sans:wght@300&family=Titillium+Web:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2? family= Noto+Sans:wght@300 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Noto+Sans:wght@300&family=Titillium+Web:wght@300&display=swap'); 
 :root {
     --cor1: #AAAAAA;
     --cor2: #606060;
@@ -134,7 +134,7 @@ body {
     opacity: 0;
 }
 .event-start {
-    transition: 1.75s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: 3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     opacity: 1 !important;
     visibility: visible !important;
 }
@@ -228,37 +228,11 @@ body {
         right: 0;
         top: -10px;
     }
-    #imgs > .imgs {
-        display: block;
-        height: 100%;
-        background-position: center center;
-        background-repeat: no-repeat;
-        animation: mudaNavegacao;
-        animation-iteration-count: infinite;
-        animation-duration: 25s;
-        animation-delay: 5s;
-        transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
-        background-image: url(../_imagens/home-peq.png);
-    }
 }
 @media (min-width: 940px) {
     body {
         padding: 0 6.8vw;
         box-sizing: border-box;
         background-color: white;
-    }
-}
-@keyframes mudaNavegacao {
-    20% {
-        background-image: url(../_imagens/fotos-peq.png);
-    } 40% {
-        background-image: url(../_imagens/especificacoes-0-peq.png);
-    } 65% {
-        background-image: url(../_imagens/contato-peq.png);
-    } 80% {
-        background-image: url(../_imagens/multimidia-peq.png);
-    }
-    100% {
-        background-image: url(../_imagens/home-peq.png);   
     }
 }
